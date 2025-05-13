@@ -15,7 +15,7 @@ const ArticleDetail = () => {
   return (
     <div>
       <TabList />
-      <main className="article-detail">
+      <main className="article-main">
         <div className="container">
           <article className="article-content">
             {/* 特征图保持原有样式 */}

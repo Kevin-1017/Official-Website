@@ -9,7 +9,7 @@ img {
   }
 }
 
-.banner {
+.banner-france {
   height: 150px;
   background-color: rgb(246 246 241);
   display: flex;
@@ -17,6 +17,10 @@ img {
   justify-content: center; /* 垂直居中 */
   align-items: center; /* 水平居中 */
   margin-bottom: 50px;
+  background-image: url(../Asserts/bgc02.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .table {
   display: flex;

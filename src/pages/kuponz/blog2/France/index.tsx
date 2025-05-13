@@ -7,7 +7,7 @@ function france() {
   return (
     <div>
       <TabList />
-      <div className="banner">
+      <div className="banner-france">
         <h1>France</h1>
         <span>
           Discover timeless beauty, rich culture, and romantic landscapes that

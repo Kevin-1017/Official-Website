@@ -19,7 +19,7 @@ export default createBrowserRouter([
     element: <KuponzArticleDetail />,
   },
   {
-    path: "/kuponz/blog2",
+    path: "/kuponz/blog2/home",
     element: <KuponzHome />,
   },
   {

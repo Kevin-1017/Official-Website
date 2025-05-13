@@ -1,8 +1,14 @@
+.home {
+  background-image: url(../Asserts/bgc_home.jpg);
+  background-color: rgba(255, 255, 255, 0.8); /* 白色背景，透明度为0.8 */
+  background-blend-mode: overlay; /* 混合模式可以根据需要调整 */
+}
+
 .container {
   margin: 0 200px;
 }
 
-.banner {
+.banner-home {
   height: 150px;
   background-color: rgb(246 246 241);
   display: flex;
@@ -10,6 +16,11 @@
   justify-content: center; /* 垂直居中 */
   align-items: center; /* 水平居中 */
   margin-bottom: 50px;
+  margin-bottom: 50px;
+  background-image: url(../Asserts/bgc01.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .manage {
   ul {

@@ -2,16 +2,14 @@ import "./index.scss";
 import ArticleList from "./treeLi";
 import TabList from "../Tab";
 import Footer from "../Footer";
+
 function Home() {
   return (
-    <div>
+    <div className="home">
       <TabList />
-      <div className="banner">
-        <h1>HOME</h1>
-        <span>
-          Plan your journey, explore new destinations, and create unforgettable
-          memories.
-        </span>
+      <div className="banner-home">
+        <h1>Home</h1>
+        <span>this is a home page</span>
       </div>
       <div className="container">
         <div className="manage">

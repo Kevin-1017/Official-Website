@@ -13,10 +13,13 @@
 
     li {
       padding: 20px;
-    }
-
-    :hover {
       cursor: pointer;
+
+      &:hover,
+      &.active {
+        background-color: #f0f0f0; // 高亮颜色可以根据你的设计进行调整
+        font-weight: bold;
+      }
     }
   }
 }
