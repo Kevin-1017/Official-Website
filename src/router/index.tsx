@@ -2,8 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 
 import KuponzBlogList from "@/pages/kuponz/blog1/BlogList";
 import KuponzArticleDetail from "@/pages/kuponz/blog1/ArticleDetail";
-import KuponzTravel from "@/pages/kuponz/bolg2/Travel";
-import KuponzFrance from "@/pages/kuponz/bolg2/France";
+import KuponzHome from "@/pages/kuponz/blog2/Home";
+import KuponzFrance from "@/pages/kuponz/blog2/France";
+import KuponzArticleDetail2 from "@/pages/kuponz/blog2/ArticleDetail";
 export default createBrowserRouter([
   {
     path: "/",
@@ -18,8 +19,12 @@ export default createBrowserRouter([
     element: <KuponzArticleDetail />,
   },
   {
-    path: "/kuponz/blog2",
-    element: <KuponzTravel />,
+    path: "/kuponz/blog2/home",
+    element: <KuponzHome />,
+  },
+  {
+    path: "/kuponz/blog2/article-detail/:id",
+    element: <KuponzArticleDetail2 />,
   },
   {
     path: "/kuponz/blog2/france",

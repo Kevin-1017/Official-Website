@@ -1,0 +1,25 @@
+.tab {
+  position: -webkit-sticky; /* 为了兼容Safari */
+  position: sticky;
+  top: 0; /* 距离顶部的距离 */
+  border-bottom: 1px solid #ccc;
+  padding: 0 200px;
+  background-color: white; /* 确保背景颜色设置好，避免透明 */
+  z-index: 1000; /* 根据需要调整z-index值，确保它位于其他内容之上 */
+
+  .tab-list {
+    width: 400px;
+    display: flex;
+
+    li {
+      padding: 20px;
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        background-color: #f0f0f0; // 高亮颜色可以根据你的设计进行调整
+        font-weight: bold;
+      }
+    }
+  }
+}
