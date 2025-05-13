@@ -1,12 +1,12 @@
 import { articles2 } from "../MockArticles/data/index";
-
+import { Article2, Item } from "../types/type";
 const ArticleList2 = () => {
   return (
     <div>
-      {articles2.map((article) => (
+      {articles2.map((article: Article2) => (
         <div className="table" key={article.id}>
           <div className="left">
-            {article.content.map((item) => (
+            {article.content.map((item: Item) => (
               <div className="model" key={item.id}>
                 <div className="blog">
                   <h2>{item.title}</h2>
