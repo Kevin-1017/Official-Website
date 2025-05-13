@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 import "./index.scss";
 import { articleList } from "../MockArticles";
+import Footer from "@/components/Footer";
 
 const BlogList = () => (
   <main className="blog-list">
+    <header className="page-header">
+      <h1>Kuponz Blog</h1>
+      <p> Your Ultimate Guide to Smart Savings & Exclusive Deals</p>
+    </header>
     <div className="container">
-      <header className="page-header">
-        <h1>Kuponz Blog</h1>
-        <p> Your Ultimate Guide to Smart Savings & Exclusive Deals</p>
-      </header>
-
       <div className="article-grid">
         {articleList.map((article: any) => (
           <article key={article.id} className="article-card">
@@ -36,6 +36,22 @@ const BlogList = () => (
         ))}
       </div>
     </div>
+    <Footer
+      style={{
+        marginTop: "30px",
+        backgroundColor: "#343a40",
+        padding: "20px 0",
+      }}
+      contentStyle={{
+        maxWidth: "1400px",
+        margin: "0 auto",
+      }}
+      textStyle={{
+        color: "#ffffff",
+        fontSize: "13px",
+        fontWeight: "bold",
+      }}
+    />
   </main>
 );
 

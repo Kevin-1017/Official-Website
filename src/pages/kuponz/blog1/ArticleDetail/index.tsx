@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import "./index.scss";
 import { useState } from "react";
 import { articleList } from "../MockArticles";
+import Footer from "@/components/Footer";
 
 const ArticleDetail = () => {
   const params = useParams();
@@ -19,7 +20,7 @@ const ArticleDetail = () => {
             alt={article.title}
             className="featured-image"
           />
-          
+
           <h1>{article.title}</h1>
           <div className="meta-info">
             <span>{article.date}</span>
@@ -39,14 +40,32 @@ const ArticleDetail = () => {
                 )}
 
                 {/* 段落内容 */}
-                {contentItem.excerpt?.map((paragraph: string, pIndex: number) => (
-                  <p key={`p-${index}-${pIndex}`}>{paragraph}</p>
-                ))}
+                {contentItem.excerpt?.map(
+                  (paragraph: string, pIndex: number) => (
+                    <p key={`p-${index}-${pIndex}`}>{paragraph}</p>
+                  )
+                )}
               </div>
             ))}
           </div>
         </article>
       </div>
+      <Footer
+        style={{
+          marginTop: "30px",
+          backgroundColor: "#ffffff",
+          padding: "20px 0",
+        }}
+        contentStyle={{
+          maxWidth: "1400px",
+          margin: "0 auto",
+        }}
+        textStyle={{
+          color: "#333333",
+          fontSize: "13px",
+          fontWeight: "bold",
+        }}
+      />
     </main>
   );
 };

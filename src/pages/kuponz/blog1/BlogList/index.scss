@@ -3,10 +3,16 @@
 .blog-list {
   .page-header {
     text-align: center;
-    max-width: 800px;
+    // max-width: 800px;
     margin: 4rem auto;
-    padding: 0 24px;
-
+    margin-top: 0px;
+    padding: 150px 24px;
+    width: 100vw;
+    height: 500px;
+    background-position: center;
+    background-image: url("./images/header-background-img.avif");
+    background-size: cover;
+    opacity: 0.9;
     h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
