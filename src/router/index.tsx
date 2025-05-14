@@ -42,7 +42,7 @@ const Router: React.FC = () => {
     // case "172.16.104.9":
     //   break;
     //当发布到线上环境时
-    case "Kuponz.oline.mobi":
+    case "kuponz.oline.mobi":
       actualRouter = [
         {
           path: "/",
