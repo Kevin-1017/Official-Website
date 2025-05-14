@@ -12,8 +12,14 @@ function Home() {
     <div className={styles.home}>
       <TabList />
       <div className={styles.banner_home}>
-        <h1>Home</h1>
-        <span>this is a home page</span>
+        <h1>Casback</h1>
+        <p>Welcome to Casback – Your Ultimate Beauty Destination!</p>
+        <span>
+          At Casback, we bring you the hottest cosmetics from top brands at
+          unbeatable prices – plus exclusive casback rewards on every purchase!
+          Whether you're looking for skincare essentials, luxurious makeup, or
+          trending beauty tools, discover quality products with real savings.
+        </span>
       </div>
       <div className={styles.container}>
         <div className={styles.manage}>
