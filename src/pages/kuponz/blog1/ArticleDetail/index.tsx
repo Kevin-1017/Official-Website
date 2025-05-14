@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { articleList } from "../MockArticles";
 import Footer from "@/components/Footer";
 
-const ArticleDetail = () => {
+const ArticleDetail: React.FC = () => {
   const params = useParams();
   const [article] = useState<any>(
     articleList.find((item) => item.id === params.id) || { content: [] }
