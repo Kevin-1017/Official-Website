@@ -74,14 +74,14 @@ const articleList = [
         image: image2For3,
         excerpt: ['# Armani53S Cosmic Pink is a soft cool baby pink, wearing it with the Chanel Rouge Coco Baume in Blushing Pink + Armani Prisma Glass 08 Sugar Halo on the lips']
       },
-      {
-        image: image2For4,
-        excerpt: ['# 50S Starlit Peach is a soft peach, wearing this with Chanel Rouge Coco Baume in Flirty Coral + Armani Prisma Glass 03 Honey Gleam']
-      },
-      {
-        image: image2For5,
-        excerpt: ['Overall really love these blushes. You can find these at Nordstrom, Sephora and Bloomingdale’s.']
-      }
+      // {
+      //   image: image2For4,
+      //   excerpt: ['# 50S Starlit Peach is a soft peach, wearing this with Chanel Rouge Coco Baume in Flirty Coral + Armani Prisma Glass 03 Honey Gleam']
+      // },
+      // {
+      //   image: image2For5,
+      //   excerpt: ['Overall really love these blushes. You can find these at Nordstrom, Sephora and Bloomingdale’s.']
+      // }
 
     ]
   },
@@ -201,13 +201,13 @@ const articleList = [
     id: '8',
     title: "Welcome Ollie!",
     date: "2025-05-03",
-    image: image8For1,
+    image: image8For2,
     excerpt: 'We are so excited to introduce the newest addition to our family Ollie! He’s a Cavapoo and we’ve had him for a full month now. Ollie has brought so much happiness to our home and we are soaking up every minute of this puppy phase. We created an Instagram page for him @olliemclovin in case you want to follow along on his puppy adventures!',
     content: [
-      {
-        image: image8For1,
-        excerpt: ['We are so excited to introduce the newest addition to our family Ollie! He’s a Cavapoo and we’ve had him for a full month now. Ollie has brought so much happiness to our home and we are soaking up every minute of this puppy phase. We created an Instagram page for him @olliemclovin in case you want to follow along on his puppy adventures!']
-      },
+      // {
+      //   image: image8For1,
+      //   excerpt: ['We are so excited to introduce the newest addition to our family Ollie! He’s a Cavapoo and we’ve had him for a full month now. Ollie has brought so much happiness to our home and we are soaking up every minute of this puppy phase. We created an Instagram page for him @olliemclovin in case you want to follow along on his puppy adventures!']
+      // },
       {
         image: image8For2,
         excerpt: ['Our pups Jake and Lucy have been missed. Jake lived 14 years and passed away the summer of 2019. Lucy lived a few more years until age 17 and passed away this last Christmas. It was so heartbreaking to lose them. Both Jack Russells gave us so much love and happiness. After Lucy passed away I never thought I’d get another dog – saying goodbye was so terribly sad, I didn’t think my heart could go through it again.', 'This year however just hasn’t been the same without them. Even our ragdoll cat Calvin noticed Lucy wasn’t around and he just hasn’t been himself. In early March Andrew told me had been researching dog breeds on his own for several weeks and said, “I think we should get a Cavapoo. They have a good temperament, they’re friendly, super cute and don’t shed.” As soon as he showed me pictures I immediately said yes!', 'We picked up Ollie when he was 9 weeks old (5 pounds). He’s a mix of a Toy Poodle and Cavalier King Charles Spaniel. Today he’s 13 weeks and weighed in at 7 pounds. He’s growing so fast and has so much energy. It’s estimated he will be 14-20 pounds full grown.', 'Here’s a video we made with him!']
@@ -215,27 +215,27 @@ const articleList = [
     ]
   },
 
-  {
-    id: '9',
-    title: "Best Red Holiday Lips + Cozy Sweater Try On Haul",
-    date: "2018-12-17",
-    image: image9For1,
-    excerpt: '',
-    content: [
-      {
-        image: image9For1,
-        excerpt: ['I’m so excited it’s finally sweater weather here! We have hot humid weather almost year round here in Tampa making it too hot to even wear denim jeans most of the time. While I love the sunshine I’m thrilled that it has cooled down enough to haul some cute sweaters. By popular request I’m combining two topics today that many of you have been asking for: best holiday red lips plus a sweater try-on haul.', 'I’m a neutral lip lover so I was actually really surprised to find how many red lip products I own. I sorted through around 35+ colors and formulas to narrow down my absolute top picks for the best color, pigment, lasting power and a few budget friendly options. I’ll discuss each color with the sweaters I paired below.']
-      },
-      {
-        image: image9For2,
-        excerpt: ['I did my first Everlane haul and picked three styles to try out. I haven’t tried the line before so I relied on online customer reviews for height and weight to decide on XXS and XS depending on style. I lucked out because I’m really happy with what I ordered. For sizing reference I have been losing weight but also gaining a little bit of muscle with our weight training. I’m 5’3″ and currently 114 pounds. I usually wear XS in most sizes, sometimes XXS because I’m on the shorter side.', 'It’s been a long time since I’ve invested in anything cashmere (again because it’s simply TOO HOT to wear here) so I can’t compare to current styles of other brands. I have tried J.Crew, Vince and Theory to name a few which I’ve loved in previous years. I think the styles I ordered from Everlane are just as good. For the Everlane Cashmere Crew ($100) I picked Light Oatmeal in XS and it’s a PERFECT fit. This is my favorite one of my purchases. It’s soft, lightweight but not tissue thin. I plan on getting a couple more colors. Denim worn are the Paige Verdugo Ankle (for me ankle jeans are the best because I usually don’t have to hem them!).', 'I’m wearing the L’Oreal Color Riche Shine in Enamel Red which is one of the best medium glossy lipsticks I’ve ever tried. I swatched all the colors of this formula in this post here.']
-      },
-      {
-        image: image9For3,
-        excerpt: [' Up next is the Everlane Cashmere Rib Round Crew ($145) in Heather Grey in XXS. I would have bought XS but one of the models on the website was wearing that size and quite a bit taller than me. I’m happy with the fit of XXS. This is a nice soft semi thick ribbed sweater. It’s one of the ones I was wearing on stories.', ' I paird this one with the NARS Powermatte Pigment in Starwoman. There are a lot of reds in this formula this one seems the most classic to me (Vain is warmer, Light My Fire is brighter and there are options with either more blue or deeper tones too). This is one of the nicest liquid matte lipstick formulas that is matte but doesn’t shrink my lips to look like raisins. It has excellent staying power and doesn’t transfer on my teeth. (If you want a neutral option American Woman is the best chestnut neutral rose out there.)']
-      }
-    ]
-  },
+  // {
+  //   id: '9',
+  //   title: "Best Red Holiday Lips + Cozy Sweater Try On Haul",
+  //   date: "2018-12-17",
+  //   image: image9For1,
+  //   excerpt: '',
+  //   content: [
+  //     {
+  //       image: image9For1,
+  //       excerpt: ['I’m so excited it’s finally sweater weather here! We have hot humid weather almost year round here in Tampa making it too hot to even wear denim jeans most of the time. While I love the sunshine I’m thrilled that it has cooled down enough to haul some cute sweaters. By popular request I’m combining two topics today that many of you have been asking for: best holiday red lips plus a sweater try-on haul.', 'I’m a neutral lip lover so I was actually really surprised to find how many red lip products I own. I sorted through around 35+ colors and formulas to narrow down my absolute top picks for the best color, pigment, lasting power and a few budget friendly options. I’ll discuss each color with the sweaters I paired below.']
+  //     },
+  //     {
+  //       image: image9For2,
+  //       excerpt: ['I did my first Everlane haul and picked three styles to try out. I haven’t tried the line before so I relied on online customer reviews for height and weight to decide on XXS and XS depending on style. I lucked out because I’m really happy with what I ordered. For sizing reference I have been losing weight but also gaining a little bit of muscle with our weight training. I’m 5’3″ and currently 114 pounds. I usually wear XS in most sizes, sometimes XXS because I’m on the shorter side.', 'It’s been a long time since I’ve invested in anything cashmere (again because it’s simply TOO HOT to wear here) so I can’t compare to current styles of other brands. I have tried J.Crew, Vince and Theory to name a few which I’ve loved in previous years. I think the styles I ordered from Everlane are just as good. For the Everlane Cashmere Crew ($100) I picked Light Oatmeal in XS and it’s a PERFECT fit. This is my favorite one of my purchases. It’s soft, lightweight but not tissue thin. I plan on getting a couple more colors. Denim worn are the Paige Verdugo Ankle (for me ankle jeans are the best because I usually don’t have to hem them!).', 'I’m wearing the L’Oreal Color Riche Shine in Enamel Red which is one of the best medium glossy lipsticks I’ve ever tried. I swatched all the colors of this formula in this post here.']
+  //     },
+  //     {
+  //       image: image9For3,
+  //       excerpt: [' Up next is the Everlane Cashmere Rib Round Crew ($145) in Heather Grey in XXS. I would have bought XS but one of the models on the website was wearing that size and quite a bit taller than me. I’m happy with the fit of XXS. This is a nice soft semi thick ribbed sweater. It’s one of the ones I was wearing on stories.', ' I paird this one with the NARS Powermatte Pigment in Starwoman. There are a lot of reds in this formula this one seems the most classic to me (Vain is warmer, Light My Fire is brighter and there are options with either more blue or deeper tones too). This is one of the nicest liquid matte lipstick formulas that is matte but doesn’t shrink my lips to look like raisins. It has excellent staying power and doesn’t transfer on my teeth. (If you want a neutral option American Woman is the best chestnut neutral rose out there.)']
+  //     }
+  //   ]
+  // },
 
   {
     id: '10',
