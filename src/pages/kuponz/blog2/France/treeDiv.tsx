@@ -1,14 +1,15 @@
 import { articles2 } from "../MockArticles/data/index";
 import { Article2, Item } from "../types/type";
+import styles from "./index.module.scss";
 const ArticleList2 = () => {
   return (
     <div>
       {articles2.map((article: Article2) => (
-        <div className="table" key={article.id}>
-          <div className="left">
+        <div className={styles.table} key={article.id}>
+          <div className={styles.left}>
             {article.content.map((item: Item) => (
-              <div className="model" key={item.id}>
-                <div className="blog">
+              <div className={styles.model} key={item.id}>
+                <div className={styles.blog}>
                   <h2>{item.title}</h2>
                   <p>{item.date}</p>
                 </div>
@@ -19,7 +20,7 @@ const ArticleList2 = () => {
             ))}
           </div>
 
-          <div className="right">
+          <div className={styles.right}>
             <div>
               <img src={article.image} alt={article.title} />
             </div>
