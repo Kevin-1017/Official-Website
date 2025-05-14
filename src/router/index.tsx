@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import KuponzBlogList from "@/pages/kuponz/blog1/BlogList";
 import KuponzArticleDetail from "@/pages/kuponz/blog1/ArticleDetail";
 import KuponzHome from "@/pages/kuponz/blog2/Home";
