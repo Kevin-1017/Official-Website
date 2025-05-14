@@ -1,33 +1,33 @@
 import { Link } from "react-router-dom";
-import "./index.scss";
+import styles from "./index.module.scss";
 import { articleList } from "../MockArticles";
 import Footer from "@/components/Footer";
 
-const BlogList = () => (
-  <main className="blog-list">
-    <header className="page-header">
+const BlogList: React.FC = () => (
+  <main className={styles.blog_list}>
+    <header className={styles.page_header}>
       <h1>Kuponz Blog</h1>
       <p> Your Ultimate Guide to Smart Savings & Exclusive Deals</p>
     </header>
-    <div className="container">
-      <div className="article-grid">
+    <div>
+      <div className={styles.article_grid}>
         {articleList.map((article: any) => (
-          <article key={article.id} className="article-card">
+          <article key={article.id} className={styles.article_card}>
             <img
               src={article.image}
               alt={article.title}
-              className="card-image"
+              className={styles.card_image}
             />
-            <div className="card-content">
+            <div className={styles.card_content}>
               <h2>
                 <Link to={`/kuponz/blog1/article-detail/${article.id}`}>
                   {article.title}
                 </Link>
               </h2>
-              <p className="excerpt">{article.excerpt}</p>
+              <p className={styles.excerpt}>{article.excerpt}</p>
               <Link
                 to={`/kuponz/blog1/article-detail/${article.id}`}
-                className="read-more"
+                className={styles.read_more}
               >
                 Read More →
               </Link>

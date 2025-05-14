@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import "./index.scss";
+import styles from "./index.module.scss";
 import { useEffect, useState } from "react";
 import { articleList } from "../MockArticles";
 import Footer from "@/components/Footer";
@@ -16,31 +16,31 @@ const ArticleDetail = () => {
   }, []);
 
   return (
-    <main className="article-detail">
-      <div className="container">
-        <article className="article-content">
+    <main className={styles.article_detail}>
+      <div className={styles.container}>
+        <article className={styles.article_content}>
           {/* 特征图保持原有样式 */}
           <img
             src={article.image}
             alt={article.title}
-            className="featured-image"
+            className={styles.featured_image}
           />
 
           <h1>{article.title}</h1>
-          <div className="meta-info">
+          <div className={styles.meta_info}>
             <span>{article.date}</span>
           </div>
 
           {/* 动态内容渲染 */}
-          <div className="dynamic-content">
+          <div className={styles.content_body}>
             {article.content.map((contentItem: any, index: number) => (
-              <div key={`content-${index}`} className="content-section">
+              <div key={`content-${index}`} className={styles.content_section}>
                 {/* 内容图片 */}
                 {contentItem.image && (
                   <img
                     src={contentItem.image}
                     alt={`Content image ${index + 1}`}
-                    className="content-image"
+                    className={styles.content_image}
                   />
                 )}
 

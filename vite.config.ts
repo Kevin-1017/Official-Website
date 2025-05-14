@@ -4,6 +4,13 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler'
+      }
+    }
+  },
   resolve: {
     // 设置文件./src路径为 @
     alias: [
