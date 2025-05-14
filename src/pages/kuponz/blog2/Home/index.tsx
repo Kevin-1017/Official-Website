@@ -1,18 +1,22 @@
-import "./index.scss";
+import styles from "./index.module.scss";
 import ArticleList from "./treeLi";
 import TabList from "../Tab";
-import Footer from "../Footer";
+import Footer from "@/components/Footer";
+import { useEffect } from "react";
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="home">
+    <div className={styles.home}>
       <TabList />
-      <div className="banner-home">
+      <div className={styles.banner_home}>
         <h1>Home</h1>
         <span>this is a home page</span>
       </div>
-      <div className="container">
-        <div className="manage">
+      <div className={styles.container}>
+        <div className={styles.manage}>
           <ArticleList />
         </div>
       </div>
