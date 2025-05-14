@@ -1,18 +1,28 @@
-import "./index.scss";
+import styles from "./index.module.scss";
 import ArticleList from "./treeLi";
 import TabList from "../Tab";
-import Footer from "../Footer";
+import Footer from "@/components/Footer";
+import { useEffect } from "react";
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="home">
+    <div className={styles.home}>
       <TabList />
-      <div className="banner-home">
-        <h1>Home</h1>
-        <span>this is a home page</span>
+      <div className={styles.banner_home}>
+        <h1>Casback</h1>
+        <p>Welcome to Casback – Your Ultimate Beauty Destination!</p>
+        <span>
+          At Casback, we bring you the hottest cosmetics from top brands at
+          unbeatable prices – plus exclusive casback rewards on every purchase!
+          Whether you're looking for skincare essentials, luxurious makeup, or
+          trending beauty tools, discover quality products with real savings.
+        </span>
       </div>
-      <div className="container">
-        <div className="manage">
+      <div className={styles.container}>
+        <div className={styles.manage}>
           <ArticleList />
         </div>
       </div>
