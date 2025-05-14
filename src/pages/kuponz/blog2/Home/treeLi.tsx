@@ -3,7 +3,7 @@ import { Article } from "../types/type";
 import { Link } from "react-router-dom";
 const ArticleList = () => {
   return (
-    <ul className="article-list">
+    <ul>
       {articles.map((article: Article) => (
         <li key={article.id}>
           <div>

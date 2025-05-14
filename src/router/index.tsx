@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import KuponzBlogList from "@/pages/kuponz/blog1/BlogList";
 import KuponzArticleDetail from "@/pages/kuponz/blog1/ArticleDetail";
 import KuponzHome from "@/pages/kuponz/blog2/Home";
@@ -23,7 +23,7 @@ const Router: React.FC = () => {
       element: <KuponzArticleDetail />,
     },
     {
-      path: "/kuponz/blog2/home",
+      path: "/kuponz/blog2",
       element: <KuponzHome />,
     },
     {
@@ -65,12 +65,16 @@ const Router: React.FC = () => {
           element: <KuponzHome />,
         },
         {
-          path: "/kuponz/blog2/article-detail/:id",
-          element: <KuponzArticleDetail2 />,
+          path: "/kuponz/blog2",
+          element: <KuponzHome />,
         },
         {
           path: "/kuponz/blog2/france",
           element: <KuponzFrance />,
+        },
+        {
+          path: "/kuponz/blog2/article-detail/:id",
+          element: <KuponzArticleDetail2 />,
         },
       ];
       break;

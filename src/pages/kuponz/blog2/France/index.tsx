@@ -1,21 +1,25 @@
-import "./index.scss";
+import styles from "./index.module.scss";
 import TabList from "../Tab";
 import ArticleList2 from "./treeDiv";
-import Footer from "../Footer";
+import Footer from "@/components/Footer";
+import { useEffect } from "react";
 
 function france() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <TabList />
-      <div className="banner-france">
+      <div className={styles.banner_france}>
         <h1>France</h1>
         <span>
           Discover timeless beauty, rich culture, and romantic landscapes that
           inspire wanderlust.
         </span>
       </div>
-      <div className="container">
-        <div className="manage">
+      <div className={styles.container}>
+        <div className={styles.manage}>
           <ArticleList2 />
         </div>
       </div>
