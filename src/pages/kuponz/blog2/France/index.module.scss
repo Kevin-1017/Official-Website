@@ -1,13 +1,6 @@
 .container {
   margin: 0 200px;
 }
-img {
-  border-radius: 15px;
-  transition: all 0.5s;
-  &:hover {
-    transform: scale(1.03);
-  }
-}
 
 .banner_france {
   height: 300px;
@@ -19,6 +12,10 @@ img {
   margin-bottom: 50px;
   position: relative; /* 确保伪元素相对于这个元素定位 */
   z-index: 1; /* 确保内容在伪元素之上 */
+  h1 {
+    position: absolute;
+    top: 10%;
+  }
 }
 
 /* 添加伪元素用于背景图 */
@@ -54,6 +51,11 @@ img {
       img {
         width: 400px;
         height: 100%;
+        border-radius: 15px;
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.03);
+        }
       }
       p {
         margin-top: 20px;
@@ -70,6 +72,11 @@ img {
     align-items: center;
     img {
       width: 100%;
+      border-radius: 15px;
+      transition: all 0.5s;
+      &:hover {
+        transform: scale(1.03);
+      }
     }
     p {
       color: rgb(115, 137, 155);
