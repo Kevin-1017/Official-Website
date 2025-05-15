@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 const BlogList: React.FC = () => (
   <main className={styles.blog_list}>
     <header className={styles.page_header}>
-      <h1>Kuponz Blog</h1>
+      <h1>Kuponz</h1>
       <p> Your Ultimate Guide to Smart Savings & Exclusive Deals</p>
     </header>
     <div>
@@ -20,13 +20,13 @@ const BlogList: React.FC = () => (
             />
             <div className={styles.card_content}>
               <h2>
-                <Link to={`/kuponz/blog1/article-detail/${article.id}`}>
+                <Link to={`/kuponz1/article_detail/${article.id}`}>
                   {article.title}
                 </Link>
               </h2>
               <p className={styles.excerpt}>{article.excerpt}</p>
               <Link
-                to={`/kuponz/blog1/article-detail/${article.id}`}
+                to={`/kuponz1/article_detail/${article.id}`}
                 className={styles.read_more}
               >
                 Read More →
