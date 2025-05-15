@@ -11,7 +11,7 @@ const ArticleList = () => {
           </div>
           <div>
             <h1>
-              <Link to={`/kuponz/blog2/article-detail/${article.id}`}>
+              <Link to={`/home/article-detail/${article.id}`}>
                 {article.title}
               </Link>
             </h1>

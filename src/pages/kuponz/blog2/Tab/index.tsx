@@ -13,21 +13,19 @@ const TabList = () => {
       <ul className={styles.tab_list}>
         <li
           className={
-            ["/", "/kuponz/blog2"].includes(location.pathname)
+            ["/", "/home"].includes(location.pathname)
               ? styles.active
               : undefined
           }
-          onClick={() => navigateTo("/kuponz/blog2")}
+          onClick={() => navigateTo("/home")}
         >
           HOME
         </li>
         <li
           className={
-            location.pathname.includes("/kuponz/blog2/france")
-              ? styles.active
-              : undefined
+            location.pathname.includes("/france") ? styles.active : undefined
           }
-          onClick={() => navigateTo("/kuponz/blog2/france")}
+          onClick={() => navigateTo("/france")}
         >
           FRANCE
         </li>

@@ -2,10 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useMemo } from "react";
 import domainList from "@/utils/data/domainList";
 import kuponz1Routes from "./modules/kuponz1";
-
-import KuponzHome from "@/pages/kuponz/blog2/Home";
-import KuponzFrance from "@/pages/kuponz/blog2/France";
-import KuponzArticleDetail2 from "@/pages/kuponz/blog2/ArticleDetail";
+import kuponz2Routes from "./modules/kuponz2";
 
 //路由命名规范
 // 1. 路由名称全部使用小写字母，多个单词使用下划线连接
@@ -20,19 +17,8 @@ const Router: React.FC = () => {
     //kuponz官网一路由
     ...kuponz1Routes.test,
 
-    //kuponz官网二测试路由
-    {
-      path: "/kuponz/blog2",
-      element: <KuponzHome />,
-    },
-    {
-      path: "/kuponz/blog2/article-detail/:id",
-      element: <KuponzArticleDetail2 />,
-    },
-    {
-      path: "/kuponz/blog2/france",
-      element: <KuponzFrance />,
-    },
+    //kuponz官网二路由
+    ...kuponz2Routes.test,
   ];
 
   switch (currentHostName) {
@@ -46,26 +32,9 @@ const Router: React.FC = () => {
     case domainList.kuponz[0]:
       actualRouter = [...kuponz1Routes.onLine];
       break;
-
+    //kuponz官网二
     case domainList.kuponz[1]:
-      actualRouter = [
-        {
-          path: "/",
-          element: <KuponzHome />,
-        },
-        {
-          path: "/kuponz/blog2",
-          element: <KuponzHome />,
-        },
-        {
-          path: "/kuponz/blog2/france",
-          element: <KuponzFrance />,
-        },
-        {
-          path: "/kuponz/blog2/article-detail/:id",
-          element: <KuponzArticleDetail2 />,
-        },
-      ];
+      actualRouter = [...kuponz2Routes.onLine];
       break;
   }
   const router = createBrowserRouter(actualRouter);
