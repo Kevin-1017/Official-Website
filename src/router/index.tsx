@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useMemo } from "react";
+import domainList from "@/utils/data/domainList";
 import kuponz1Routes from "./modules/kuponz1";
 
 import KuponzHome from "@/pages/kuponz/blog2/Home";
@@ -8,23 +9,16 @@ import KuponzArticleDetail2 from "@/pages/kuponz/blog2/ArticleDetail";
 
 //路由命名规范
 // 1. 路由名称全部使用小写字母，多个单词使用下划线连接
-// 2. 所有一级路由以相应官网名开头,官网几在后面填数字几。示例:/kuponz1
-// 3. 首页用home命名，其他页面用模块名
+// 2. 测试环境所有一级路由以相应官网名开头,官网几在后面填数字几。线上环境则不以官网名开头。
+// 3. 首页用home命名，其他页面用模块名。示例:/kuponz1/home
 
 const Router: React.FC = () => {
   const currentHostName = useMemo(() => window.location.hostname, []);
 
-  const domainList = useMemo(
-    () => ({
-      kuponz: ["kuponz.oline.mobi", "casback.tech"],
-    }),
-    []
-  );
-
   //本地环境及测试环境通用的默认路由
   let actualRouter = [
     //kuponz官网一路由
-    ...kuponz1Routes,
+    ...kuponz1Routes.test,
 
     //kuponz官网二测试路由
     {
@@ -50,7 +44,7 @@ const Router: React.FC = () => {
 
     //kuponz官网一
     case domainList.kuponz[0]:
-      actualRouter = [...kuponz1Routes];
+      actualRouter = [...kuponz1Routes.onLine];
       break;
 
     case domainList.kuponz[1]:
