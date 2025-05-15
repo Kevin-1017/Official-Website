@@ -4,15 +4,15 @@ import Kuponz2ArticleDetail from "@/pages/kuponz/blog2/ArticleDetail";
 export default {
   test: [
     {
-      path: "/home",
+      path: "/kuponz2/home",
       element: <Kuponz2Home />,
     },
     {
-      path: "/home/article-detail/:id",
+      path: "/kuponz2/article-detail/:id",
       element: <Kuponz2ArticleDetail />,
     },
     {
-      path: "/france",
+      path: "/kuponz2/france",
       element: <Kuponz2France />,
     },
   ],
@@ -30,7 +30,7 @@ export default {
       element: <Kuponz2France />,
     },
     {
-      path: "/home/article-detail/:id",
+      path: "/article-detail/:id",
       element: <Kuponz2ArticleDetail />,
     },
   ],

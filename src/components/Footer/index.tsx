@@ -5,13 +5,19 @@ interface FooterProps {
   style?: React.CSSProperties;
   contentStyle?: React.CSSProperties;
   textStyle?: React.CSSProperties;
+  copyright: string;
 }
 
-const Footer: React.FC<FooterProps> = ({ style, contentStyle, textStyle }) => {
+const Footer: React.FC<FooterProps> = ({
+  style,
+  contentStyle,
+  textStyle,
+  copyright,
+}) => {
   return (
     <footer className={styles.footer} style={style}>
       <div className={styles.footer_content} style={contentStyle}>
-        <p style={textStyle}>Copyright © 2026 Kuponz. All Rights Reserved.</p>
+        <p style={textStyle}>{copyright}</p>
       </div>
     </footer>
   );

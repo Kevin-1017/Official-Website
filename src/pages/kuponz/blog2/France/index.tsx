@@ -38,6 +38,7 @@ function france() {
           fontSize: "13px",
           fontWeight: "bold",
         }}
+        copyright=" Copyright © 2026 Casback. All Rights Reserved."
       />
     </div>
   );

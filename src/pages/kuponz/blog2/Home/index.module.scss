@@ -53,6 +53,11 @@
     }
     h1 {
       margin-bottom: 10px;
+      span {
+        &:hover {
+          color: rgb(115, 137, 155);
+        }
+      }
     }
     span {
       display: block;

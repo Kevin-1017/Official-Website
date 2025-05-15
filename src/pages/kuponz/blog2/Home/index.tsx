@@ -1,5 +1,5 @@
 import styles from "./index.module.scss";
-import ArticleList from "./treeLi";
+import ArticleList from "./ArticleList";
 import TabList from "../Tab";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
@@ -41,6 +41,7 @@ function Home() {
           fontSize: "13px",
           fontWeight: "bold",
         }}
+        copyright="Copyright © 2026 Casback. All Rights Reserved."
       />
     </div>
   );

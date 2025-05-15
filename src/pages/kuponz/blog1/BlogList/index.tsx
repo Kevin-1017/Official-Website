@@ -69,6 +69,7 @@ const BlogList: React.FC = () => {
           fontSize: "13px",
           fontWeight: "bold",
         }}
+        copyright="Copyright © 2026 Kuponz. All Rights Reserved."
       />
     </main>
   );
