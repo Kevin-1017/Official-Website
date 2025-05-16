@@ -83,7 +83,7 @@
   // 中等屏幕（如平板，屏幕宽度 < 992px）
   @media (max-width: 992px) {
     ul li {
-      flex: 0 0 46%;
+      flex: 0 0 48%;
       max-width: 46%;
     }
   }
@@ -91,8 +91,8 @@
   // 小屏幕（如手机，屏幕宽度 < 768px）
   @media (max-width: 768px) {
     ul li {
-      flex: 0 0 90%;
-      max-width: 90%;
+      flex: 0 0 100%;
+      max-width: 100%;
     }
   }
 }
