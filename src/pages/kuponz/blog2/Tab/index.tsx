@@ -13,7 +13,7 @@ const TabList = () => {
   if (currentHostName === domainList.kuponz[1]) {
     // 线上环境
     return (
-      <div className={styles.tab}>
+      <div className={`${styles.tab} ${styles.norem_tab}`}>
         <ul className={styles.tab_list}>
           <li
             className={
@@ -39,7 +39,7 @@ const TabList = () => {
   } else {
     // 非线上环境，包含生产和测试环境
     return (
-      <div className={styles.tab}>
+      <div className={`${styles.tab} ${styles.norem_tab}`}>
         <ul className={styles.tab_list}>
           <li
             className={

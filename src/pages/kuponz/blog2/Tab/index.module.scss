@@ -5,16 +5,13 @@
   padding: 0 200px;
   background-color: white;
   z-index: 1000; /* 根据需要调整z-index值，确保它位于其他内容之上 */
-  height: 5vh;
   .tab_list {
     display: flex;
     height: 100%;
-    width: 50%;
     li {
       display: flex;
       align-items: center;
       padding: 20px;
-
       cursor: pointer;
       &:hover,
       &.active {
@@ -22,4 +19,11 @@
       }
     }
   }
+}
+.norem_tab {
+  height: 50px;
+  font-size: 13px;
+  font-family: "Segoe UI", sans-serif; // 设置字体家族
+  font-weight: 600; // 加粗
+  color: #333;
 }
