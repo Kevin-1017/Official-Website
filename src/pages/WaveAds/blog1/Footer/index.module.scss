@@ -2,10 +2,38 @@
   height: 300px;
   width: 100%;
   padding: 0 300px;
-  p {
+  background: linear-gradient(135deg, #ff9933, #ff66cc);
+  position: relative;
+
+  .module {
+    a {
+      color: #f14181; // 设置为你想要的颜色
+      text-decoration: none; // 去掉下划线
+      transition: none; // 禁用颜色过渡效果
+      font-size: 80px;
+      &:hover,
+      &:visited,
+      &:active,
+      &:focus {
+        color: #f14181;
+        outline: none;
+      }
+    }
+    .module_p {
+      font-size: 60px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .Copyright_p {
+    position: absolute;
     color: #6c757d;
     font-size: 0.9rem;
     margin: 0;
-    text-align: center;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
   }
 }

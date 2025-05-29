@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import styles from "./index.module.scss";
-import { Button, Checkbox, Form, Input, Select } from "antd";
+import { Button, Checkbox, Form, Input, Select, notification } from "antd";
 import axios from "axios";
+{
+  window.$t("");
+}
 const { Option } = Select;
 
 const formItemLayout = {
@@ -31,168 +34,232 @@ const tailFormItemLayout = {
 
 const ContactUs: React.FC = () => {
   const [form] = Form.useForm();
-  // 表单提交处理函数
+  const [api, contextHolder] = notification.useNotification();
+  const [countryList, setCountryList] = useState<any[]>([]);
+  const [loading, setConfirmLoading] = useState(false);
+  const message = [
+    window.$t("submit successfully"),
+    window.$t("Your information has been successfully submitted!"),
+    window.$t("submit wrong"),
+    window.$t("something went wrong"),
+    window.$t("The input is not valid businessEmail!"),
+    window.$t("Please input your businessEmail!"),
+    window.$t("Please input your first name!"),
+    window.$t("Please input your last name!"),
+    window.$t("Please select country/region!"),
+    window.$t("Please select option!"),
+    window.$t("Please input company name!"),
+    window.$t("Should accept agreement"),
+  ];
+  useEffect(() => {
+    const fetchCountries = async () => {
+      const res = await axios.get(
+        "https://test01-pac-gateway.tec-develop.cn/pac-foreign/officialwebsite/country/lsit"
+      );
+      setCountryList(res.data.data);
+    };
+    fetchCountries();
+  }, []);
+
   const onFinish = async (values: any) => {
     values.officialWebsiteName = "waveads";
-    console.log("Received values of form: ", values);
+    setConfirmLoading(true);
     await axios
       .post(
         "https://test01-bop-front.tec-develop.cn/api/pac-foreign/officialwebsite/add",
         values
       )
       .then((res) => {
-        console.log(res);
+        if (res.data.code === 200) {
+          setConfirmLoading(false);
+          api.success({
+            message: message[0],
+            description: message[1],
+            placement: "top",
+          });
+        } else {
+          setConfirmLoading(false);
+          api.error({
+            message: message[2],
+            description: message[3],
+            placement: "top",
+          });
+        }
       })
-      .catch(function (error) {
-        console.log(error);
+      .catch(function () {
+        setConfirmLoading(false);
+        api.error({
+          message: message[2],
+          description: message[3],
+          placement: "top",
+        });
       });
   };
-
+  const describes = [
+    "Mobile App Advertiser interested in machine-learning advertising",
+    "Marketplace or Retailer interested in building a commerce mediaads platform",
+    "Ad Agencyinterested in agency partner program",
+    "Publisher interested in SDK (priority list)",
+    "Streaming company interested in a building a streaming ads server",
+    "Other",
+  ];
   return (
-    <div className={styles.contactUs} id="contact-us">
-      <h1>Get in touch</h1>
-      <Form
-        {...formItemLayout}
-        form={form}
-        name="submit"
-        onFinish={onFinish}
-        style={{ maxWidth: 600, margin: "0 auto" }}
-        scrollToFirstError
-      >
-        <Form.Item
-          name="businessEmail"
-          label="Business Email"
-          labelCol={{ span: 24 }}
-          wrapperCol={{ span: 24 }}
-          rules={[
-            {
-              type: "email",
-              message: "The input is not valid businessEmail!",
-            },
-            {
-              required: true,
-              message: "Please input your businessEmail!",
-            },
-          ]}
+    <>
+      {contextHolder}
+      <div className={styles.contactUs} id="contact-us">
+        <h1>{window.$t("Get in touch")}</h1>
+        <Form
+          {...formItemLayout}
+          form={form}
+          name="submit"
+          onFinish={onFinish}
+          style={{ maxWidth: 600, margin: "0 auto" }}
+          scrollToFirstError
         >
-          <Input />
-        </Form.Item>
-
-        <div className={styles.name}>
           <Form.Item
-            name="firstName"
-            label="First name"
+            name="businessEmail"
+            label={window.$t("Business Email")}
             labelCol={{ span: 24 }}
             wrapperCol={{ span: 24 }}
             rules={[
               {
+                type: "email",
+                message: message[4],
+              },
+              {
                 required: true,
-                message: "Please input your first name!",
-                whitespace: true,
+                message: message[5],
               },
             ]}
           >
             <Input />
           </Form.Item>
+
+          <div className={styles.name}>
+            <Form.Item
+              name="firstName"
+              label={window.$t("First name")}
+              labelCol={{ span: 24 }}
+              wrapperCol={{ span: 24 }}
+              rules={[
+                {
+                  required: true,
+                  message: message[6],
+                  whitespace: true,
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              name="lastName"
+              label={window.$t("Last name")}
+              labelCol={{ span: 24 }}
+              wrapperCol={{ span: 24 }}
+              rules={[
+                {
+                  required: true,
+                  message: message[7],
+                  whitespace: true,
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+          </div>
+
           <Form.Item
-            name="lastName"
-            label="Last name"
+            name="country"
+            label={window.$t("Country / Region")}
             labelCol={{ span: 24 }}
             wrapperCol={{ span: 24 }}
-            rules={[
-              {
-                required: true,
-                message: "Please input your last name!",
-                whitespace: true,
-              },
-            ]}
+            rules={[{ required: true, message: message[8] }]}
+          >
+            <Select placeholder={window.$t("select your country/region")}>
+              {countryList.map((country: any) => (
+                <Option key={country.code} value={country.code}>
+                  {country.enTxt}
+                </Option>
+              ))}
+            </Select>
+          </Form.Item>
+
+          <Form.Item
+            name="describes"
+            label={window.$t("Which solution are you interested in?")}
+            labelCol={{ span: 24 }}
+            wrapperCol={{ span: 24 }}
+            rules={[{ required: true, message: message[9] }]}
+          >
+            <Select placeholder={window.$t("select your option")}>
+              {describes.map((item) => (
+                <Option key={item} value={item}>
+                  {item}
+                </Option>
+              ))}
+            </Select>
+          </Form.Item>
+
+          <Form.Item
+            name="companyName"
+            label={window.$t("Company name")}
+            labelCol={{ span: 24 }}
+            wrapperCol={{ span: 24 }}
+            rules={[{ required: true, message: message[10] }]}
           >
             <Input />
           </Form.Item>
-        </div>
 
-        <Form.Item
-          name="country"
-          label="Country / Region"
-          labelCol={{ span: 24 }}
-          wrapperCol={{ span: 24 }}
-          rules={[{ required: true, message: "Please select country/region!" }]}
-        >
-          <Select placeholder="select your country/region">
-            <Option value="China">China</Option>
-          </Select>
-        </Form.Item>
-
-        <Form.Item
-          name="describes"
-          label="Which option best describes you?"
-          labelCol={{ span: 24 }}
-          wrapperCol={{ span: 24 }}
-          rules={[{ required: true, message: "Please select option!" }]}
-        >
-          <Select placeholder="select your option">
-            <Option value="Marketplace or Retailer interested in building a commerce media ads platform">
-              Marketplace or Retailer interested in building a commerce media
-              ads platform
-            </Option>
-          </Select>
-        </Form.Item>
-
-        <Form.Item
-          name="companyName"
-          label="Company name"
-          labelCol={{ span: 24 }}
-          wrapperCol={{ span: 24 }}
-          rules={[{ required: true, message: "Please input company name!" }]}
-        >
-          <Input />
-        </Form.Item>
-
-        <Form.Item
-          name="remark"
-          label="Anything else?"
-          labelCol={{ span: 24 }}
-          wrapperCol={{ span: 24 }}
-          rules={[{ required: false }]}
-        >
-          <Input.TextArea showCount maxLength={100} />
-        </Form.Item>
-
-        <Form.Item
-          name="agreement"
-          valuePropName="checked"
-          rules={[
-            {
-              validator: (_, value) =>
-                value
-                  ? Promise.resolve()
-                  : Promise.reject(new Error("Should accept agreement")),
-            },
-          ]}
-          {...tailFormItemLayout}
-        >
-          <Checkbox>
-            I have read the <a href="">agreement</a>
-          </Checkbox>
-        </Form.Item>
-
-        <Form.Item
-          {...tailFormItemLayout}
-          wrapperCol={{ span: 24 }}
-          style={{ textAlign: "center" }}
-        >
-          <Button
-            type="primary"
-            htmlType="submit"
-            size="large"
-            color="pink"
-            variant="solid"
+          <Form.Item
+            name="remark"
+            label={window.$t("Anything else?")}
+            labelCol={{ span: 24 }}
+            wrapperCol={{ span: 24 }}
+            rules={[{ required: false }]}
           >
-            SUBMIT
-          </Button>
-        </Form.Item>
-      </Form>
-    </div>
+            <Input.TextArea showCount maxLength={500} />
+          </Form.Item>
+
+          <Form.Item
+            name="agree"
+            valuePropName="checked"
+            rules={[
+              {
+                validator: (_, value) =>
+                  value
+                    ? Promise.resolve()
+                    : Promise.reject(new Error(message[11])),
+              },
+            ]}
+            {...tailFormItemLayout}
+            wrapperCol={{ span: 24 }}
+          >
+            <Checkbox>
+              {window.$t(
+                "I agree to receive updates, marketing, and other communications from WaveAds."
+              )}
+            </Checkbox>
+          </Form.Item>
+
+          <Form.Item
+            {...tailFormItemLayout}
+            wrapperCol={{ span: 24 }}
+            style={{ textAlign: "center" }}
+          >
+            <Button
+              type="primary"
+              htmlType="submit"
+              size="large"
+              color="pink"
+              variant="solid"
+              loading={loading}
+            >
+              {window.$t("SUBMIT")}
+            </Button>
+          </Form.Item>
+        </Form>
+      </div>
+    </>
   );
 };
 
