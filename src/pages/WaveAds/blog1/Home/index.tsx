@@ -5,7 +5,7 @@ import brand from "../Public/brand.jpg";
 import team1 from "../Public/team1.jpg";
 import team2 from "../Public/team2.jpg";
 import team3 from "../Public/team3.jpeg";
-
+import banner from "../Public/banner.jpg";
 import Footer from "../Footer/index";
 import ContactUs from "../ContactUs";
 
@@ -17,7 +17,13 @@ function Home() {
   return (
     <div className={styles.home}>
       <TabList />
-      <div className={styles.banner_home}>
+      <div
+        className={styles.banner_home}
+        style={{
+          backgroundImage: `url(${banner})`,
+          backgroundPosition: "center",
+        }}
+      >
         <h1>{window.$t("The Digital Wave Rider")}</h1>
         <p>
           {window.$t(
@@ -26,10 +32,10 @@ function Home() {
         </p>
       </div>
       <div className={styles.container}>
-        <h1>{window.$t("Brand Introduction")}</h1>
         <div className={styles.brand}>
           <img src={brand} alt="" />
           <div className={styles.brand_right}>
+            <h1>{window.$t("Brand Introduction")}</h1>
             <p>
               {window.$t(
                 "Founded in 2017, WaveAds is headquartered in LA. It is a leading global mobile growth platform dedicated to driving media synergy through Al technology. We provide developers with intelligent growth solutions that span User Acquisition, Re-targeting, ASO, traffic monetization, and full life-cycle management."
