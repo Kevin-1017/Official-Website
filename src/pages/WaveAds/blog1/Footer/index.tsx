@@ -7,6 +7,7 @@ import { PlusOutlined } from "@ant-design/icons";
 import { Upload, Button } from "antd";
 import axios from "axios";
 import { RcFile } from "antd/es/upload/interface";
+import { AnimatedComponent } from "@/components/animation";
 {
   window.$t("");
 }
@@ -16,10 +17,6 @@ function Footer() {
   const [loading, setConfirmLoading] = useState(false);
   const [form] = Form.useForm();
   const [fileList, setFileList] = useState<RcFile[]>([]);
-  const showModal = () => {
-    setOpen(true);
-  };
-
   const handleCancel = () => {
     setOpen(false);
     setFileList([]);
@@ -62,92 +59,105 @@ function Footer() {
     <>
       {contextHolder}
       <div className={styles.footer}>
-        <div className={styles.module}>
-          <a
-            href="https://www.linkedin.com/company/waveads-global/?viewAsMember=true"
-            target="_blank"
-          >
-            <LinkedinOutlined />
-          </a>
-          <p className={styles.module_p} onClick={showModal}>
-            {window.$t("Careers")}
-          </p>
-        </div>
-        <Modal
-          title={window.$t("UPLOAD YOUR RESUME")}
-          open={open}
-          footer={null}
-          onCancel={handleCancel}
-        >
-          <div>
-            <Form
-              labelCol={{ span: 4 }}
-              wrapperCol={{ span: 14 }}
-              layout="horizontal"
-              style={{ maxWidth: 600 }}
-              form={form}
-              name="submit"
-              onFinish={onFinish}
+        <div className={styles.careers}>
+          {/* 这就是个div */}
+          <AnimatedComponent animationType="slide_up">
+            <div className={styles.careers_text}>
+              <h1>Careers</h1>
+              <p className={styles.Careers_p} onClick={() => setOpen(true)}>
+                Click here to submit your resume below and we’ll get back to you
+                if there’s a match.
+              </p>
+            </div>
+          </AnimatedComponent>
+
+          <div className={styles.module}>
+            <p className={styles.Copyright_p}>
+              {window.$t("Copyright © 2026 WaveAds. All Rights Reserved.")}
+            </p>
+
+            <a
+              href="https://www.linkedin.com/company/waveads-global/?viewAsMember=true"
+              target="_blank"
             >
-              <Form.Item label="Upload" valuePropName="fileList">
-                <Upload
-                  listType="picture-card"
-                  fileList={fileList}
-                  beforeUpload={(file) => {
-                    // 暂存文件，不立即上传
-                    setFileList([...fileList, file]); // 追加文件到列表中
-                    return false; // 阻止默认上传行为
-                  }}
-                  onRemove={(file) => {
-                    // 删除时更新 fileList
-                    const newFileList = fileList.filter(
-                      (item) => item.uid !== file.uid
-                    );
-                    setFileList(newFileList);
-                  }}
-                >
-                  <button
-                    style={{
-                      color: "inherit",
-                      cursor: "inherit",
-                      border: 0,
-                      background: "none",
-                    }}
-                    type="button"
-                  >
-                    <PlusOutlined />
-                    <div style={{ marginTop: 14 }}>{window.$t("Upload")}</div>
-                  </button>
-                </Upload>
-              </Form.Item>
-              <Form.Item
-                wrapperCol={{ span: 24 }}
-                style={{ textAlign: "center" }}
-              >
-                <Button
-                  size="small"
-                  style={{ marginRight: 20 }}
-                  onClick={handleCancel}
-                >
-                  {window.$t("CANCEL")}
-                </Button>
-                <Button
-                  type="primary"
-                  htmlType="submit"
-                  size="small"
-                  color="pink"
-                  variant="solid"
-                  loading={loading}
-                >
-                  {window.$t("SUBMIT")}
-                </Button>
-              </Form.Item>
-            </Form>
+              <LinkedinOutlined />
+            </a>
           </div>
-        </Modal>
-        <p className={styles.Copyright_p}>
-          {window.$t("Copyright © 2026 WaveAds. All Rights Reserved.")}
-        </p>
+
+          <Modal
+            title={window.$t("UPLOAD YOUR RESUME")}
+            open={open}
+            footer={null}
+            onCancel={handleCancel}
+          >
+            <div>
+              <Form
+                labelCol={{ span: 4 }}
+                wrapperCol={{ span: 14 }}
+                layout="horizontal"
+                style={{ maxWidth: 600 }}
+                form={form}
+                name="submit"
+                onFinish={onFinish}
+              >
+                <Form.Item label="Upload" valuePropName="fileList">
+                  <Upload
+                    listType="picture-card"
+                    fileList={fileList}
+                    beforeUpload={(file) => {
+                      // 暂存文件，不立即上传
+                      setFileList([...fileList, file]); // 追加文件到列表中
+                      return false; // 阻止默认上传行为
+                    }}
+                    onRemove={(file) => {
+                      // 删除时更新 fileList
+                      const newFileList = fileList.filter(
+                        (item) => item.uid !== file.uid
+                      );
+                      setFileList(newFileList);
+                    }}
+                  >
+                    <button
+                      style={{
+                        color: "inherit",
+                        cursor: "inherit",
+                        border: 0,
+                        background: "none",
+                      }}
+                      type="button"
+                    >
+                      <PlusOutlined />
+                      <div style={{ marginTop: 14 }}>{window.$t("Upload")}</div>
+                    </button>
+                  </Upload>
+                </Form.Item>
+                <Form.Item
+                  wrapperCol={{ span: 24 }}
+                  style={{ textAlign: "center" }}
+                >
+                  <Button
+                    size="small"
+                    style={{ marginRight: 20, borderRadius: "0" }}
+                    onClick={handleCancel}
+                  >
+                    {window.$t("CANCEL")}
+                  </Button>
+                  <Button
+                    type="primary"
+                    htmlType="submit"
+                    size="small"
+                    color="pink"
+                    variant="solid"
+                    loading={loading}
+                    style={{ borderRadius: "0", backgroundColor: "#ff638d" }}
+                  >
+                    {window.$t("SUBMIT")}
+                  </Button>
+                </Form.Item>
+              </Form>
+            </div>
+          </Modal>
+        </div>
       </div>
     </>
   );

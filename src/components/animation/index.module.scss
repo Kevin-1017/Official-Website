@@ -1,0 +1,55 @@
+.slide_right {
+  animation: slideInFromRight 2s ease-out forwards;
+}
+// ease-out 让动画结束时减速，看起来更自然。
+// forwards 确保动画结束后保持最终状态（不会回退到原始样式）。
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.slide_up {
+  animation: slideInFromBottom 2s ease-out forwards;
+}
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.slide_left {
+  animation: slideInFromLeft 2s ease-out forwards;
+}
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.appear {
+  animation: appear 3s ease-out forwards;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
