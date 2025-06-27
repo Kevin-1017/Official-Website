@@ -82,7 +82,7 @@ function Wall() {
                   transition: "transform 0.5s ease",
                 }}
               >
-                {caseImg.map((item, key) => (
+                {caseImg.map((item) => (
                   <li className={styles.case_li}>
                     <div className={styles.case_top}></div>
                     <div className={styles.case_div}>
