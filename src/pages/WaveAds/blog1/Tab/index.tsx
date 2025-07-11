@@ -3,7 +3,7 @@ import logo from "../Public/logo.jpg";
 import language from "../Public/language.png";
 import { useState, useEffect, useRef, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import domainList from "@/utils/data/domainList";
+// import domainList from "@/utils/data/domainList";
 const TabList = () => {
   const [showList, setShowList] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
