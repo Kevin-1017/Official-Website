@@ -52,7 +52,7 @@ const TabList = () => {
   const nagative = useNavigate();
   const currentHostName = useMemo(() => window.location.hostname, []);
   const toContact = () => {
-    if (currentHostName === domainList.waveads[1]) {
+    if (currentHostName === "waveads-global.com") {
       nagative("/contact-us");
     } else {
       nagative("/waveads1/contact-us");
