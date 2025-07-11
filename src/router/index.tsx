@@ -3,8 +3,8 @@ import { useMemo } from "react";
 import domainList from "@/utils/data/domainList";
 import kuponz1Routes from "./modules/kuponz1";
 import kuponz2Routes from "./modules/kuponz2";
-// import waveads1Routes from "./modules/waveads1";
-// import privacyRoutes from "./modules/privacypolicy";
+import waveads1Routes from "./modules/waveads1";
+import privacyRoutes from "./modules/privacypolicy";
 
 //路由命名规范
 // 1. 路由名称全部使用小写字母，多个单词使用下划线连接
@@ -22,11 +22,11 @@ const Router: React.FC = () => {
     //kuponz官网二路由
     ...kuponz2Routes.test,
 
-    // //waveads路由
-    // ...waveads1Routes.test,
+    //waveads路由
+    ...waveads1Routes.test,
 
-    // //privacy路由
-    // ...privacyRoutes.test,
+    //privacy路由
+    ...privacyRoutes.test,
   ];
 
   switch (currentHostName) {
