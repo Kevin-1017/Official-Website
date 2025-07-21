@@ -1,0 +1,51 @@
+.footer {
+  width: 100%;
+  position: relative;
+  .careers {
+    height: 100%;
+    background: linear-gradient(135deg, #ff9933, #ff66cc);
+    color: white;
+    text-align: center;
+    .careers_text {
+      opacity: 0;
+      h1 {
+        padding-top: 50px;
+        margin-bottom: 20px;
+        font-size: 50px;
+      }
+      .Careers_p {
+        margin-bottom: 20px;
+        font-size: 20px;
+        width: max-content;
+        margin: 0 auto;
+        &:hover {
+          cursor: pointer;
+          color: #f14181;
+          transition: all 0.3s ease; // 添加平滑过渡效果
+        }
+      }
+    }
+
+    .module {
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 0;
+      background-color: white;
+      a {
+        color: #f14181; // 设置为你想要的颜色
+        text-decoration: none; // 去掉下划线
+        transition: none; // 禁用颜色过渡效果
+        font-size: 30px;
+      }
+    }
+
+    .Copyright_p {
+      color: #6c757d;
+      font-size: 0.9rem;
+      margin: 0;
+      margin-right: 100px;
+    }
+  }
+}

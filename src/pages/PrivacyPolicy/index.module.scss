@@ -1,0 +1,140 @@
+.container {
+  background-color: black;
+  height: 100%;
+  strong {
+    color: #fff;
+  }
+  .title {
+    padding-top: 100px;
+    text-align: center;
+    p {
+      color: #bababa;
+    }
+    h1 {
+      font-size: 70px;
+      background: linear-gradient(90deg, blue 0%, cyan 70%, cyan 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+  .policy {
+    padding: 0 20%;
+    .c {
+      text-align: justify; // 神奇属性
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #bababa;
+    }
+    .t {
+      text-align: justify;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+  .table1 {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 300px 400px;
+    height: 600px;
+    width: 100%;
+    border: 1px solid #444444;
+    p {
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+    }
+    .table1_cell1 {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #444444;
+      .table1_cell1_2 {
+        flex: 1;
+        border-bottom: 1px solid #444444;
+      }
+      .table1_cell1_3 {
+        height: 200px;
+      }
+    }
+    .table1_cell1_1 {
+      height: 50px;
+      border-bottom: 1px solid #444444;
+    }
+    .table1_cell2,
+    .table1_cell3 {
+      display: flex;
+      flex-direction: column;
+    }
+    .table1_cell2 {
+      border-right: 1px solid #444444;
+    }
+    .table1_cell2_2 {
+      flex: 1;
+    }
+  }
+  .table2 {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 300px 400px;
+    border: 1px solid #444444;
+    p {
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+    }
+    .table2_cell2 {
+      border-right: 1px solid #444444;
+      border-left: 1px solid #444444;
+    }
+    .table2_cell1_1,
+    .table2_cell1_2,
+    .table2_cell1_3,
+    .table2_cell1_4,
+    .table2_cell1_5,
+    .table2_cell1_6 {
+      height: 200px;
+    }
+    .table2_cell1_1,
+    .table2_cell1_2,
+    .table2_cell1_3,
+    .table2_cell1_4,
+    .table2_cell1_5 {
+      border-bottom: 1px solid #444444;
+    }
+    .table2_cell1_1 {
+      height: 100px;
+    }
+  }
+  .table3 {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    border: 1px solid #444444;
+    p {
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+    }
+    .table3_cell1 {
+      border-right: 1px solid #444444;
+    }
+    .table3_cell1_1,
+    .table3_cell1_2,
+    .table3_cell1_3,
+    .table3_cell1_4,
+    .table3_cell1_5,
+    .table3_cell1_6 {
+      height: 100px;
+    }
+    .table3_cell1_1,
+    .table3_cell1_2,
+    .table3_cell1_3,
+    .table3_cell1_4,
+    .table3_cell1_5 {
+      border-bottom: 1px solid #444444;
+    }
+  }
+}
