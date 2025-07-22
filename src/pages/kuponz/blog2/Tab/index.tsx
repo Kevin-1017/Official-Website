@@ -10,7 +10,10 @@ const TabList = () => {
     navigate(routeName);
   };
   const currentHostName = useMemo(() => window.location.hostname, []);
-  if (currentHostName === domainList.kuponz[1]) {
+  if (
+    currentHostName === domainList.kuponzVersion1[1] ||
+    domainList.kuponzVersion2[1]
+  ) {
     // 线上环境
     return (
       <div className={`${styles.tab} ${styles.norem_tab}`}>
