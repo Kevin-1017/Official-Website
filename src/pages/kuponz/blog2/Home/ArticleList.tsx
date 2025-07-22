@@ -9,8 +9,9 @@ const ArticleList = () => {
 
   const handleArticleClick = (id: number) => {
     if (
-      currentHostName === domainList.kuponzVersion1[1] ||
-      domainList.kuponzVersion2[1]
+      [domainList.kuponzVersion1[1], domainList.kuponzVersion2[1]].includes(
+        currentHostName
+      )
     ) {
       // 线上环境跳转
       navigate(`/article-detail/${id}`);

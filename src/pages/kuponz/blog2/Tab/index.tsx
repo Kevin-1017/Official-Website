@@ -11,8 +11,9 @@ const TabList = () => {
   };
   const currentHostName = useMemo(() => window.location.hostname, []);
   if (
-    currentHostName === domainList.kuponzVersion1[1] ||
-    domainList.kuponzVersion2[1]
+    [domainList.kuponzVersion1[1], domainList.kuponzVersion2[1]].includes(
+      currentHostName
+    )
   ) {
     // 线上环境
     return (
