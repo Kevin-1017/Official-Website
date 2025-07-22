@@ -37,11 +37,17 @@ const Router: React.FC = () => {
     //当发布到线上环境时
 
     //kuponz官网一
-    case domainList.kuponz[0]:
+    case domainList.kuponzVersion1[0]:
+      actualRouter = [...kuponz1Routes.onLine];
+      break;
+    case domainList.kuponzVersion2[0]:
       actualRouter = [...kuponz1Routes.onLine];
       break;
     //kuponz官网二
-    case domainList.kuponz[1]:
+    case domainList.kuponzVersion1[1]:
+      actualRouter = [...kuponz2Routes.onLine];
+      break;
+    case domainList.kuponzVersion2[1]:
       actualRouter = [...kuponz2Routes.onLine];
       break;
     // //waveads官网

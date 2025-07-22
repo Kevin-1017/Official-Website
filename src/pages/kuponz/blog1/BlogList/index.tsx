@@ -7,7 +7,9 @@ import Footer from "@/components/Footer";
 
 const BlogList: React.FC = () => {
   const isOnLine = useMemo(
-    () => domainList.kuponz.includes(window.location.hostname),
+    () =>
+      domainList.kuponzVersion1.includes(window.location.hostname) ||
+      domainList.kuponzVersion2.includes(window.location.hostname),
     []
   );
 

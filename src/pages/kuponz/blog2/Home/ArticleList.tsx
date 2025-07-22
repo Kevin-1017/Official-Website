@@ -8,7 +8,11 @@ const ArticleList = () => {
   const currentHostName = useMemo(() => window.location.hostname, []);
 
   const handleArticleClick = (id: number) => {
-    if (currentHostName === domainList.kuponz[1]) {
+    if (
+      [domainList.kuponzVersion1[1], domainList.kuponzVersion2[1]].includes(
+        currentHostName
+      )
+    ) {
       // 线上环境跳转
       navigate(`/article-detail/${id}`);
     } else {
