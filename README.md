@@ -17,14 +17,32 @@ If you are developing a production application, we recommend updating the config
 export default {
   // other rules...
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.app.json"],
     tsconfigRootDir: __dirname,
   },
-}
+};
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+官网整合：
+KuponzVersion1:{
+blog1: https://kuponz.oline.mobi/
+blog2: https://casback.tech/
+}
+KuponzVersion2:{
+blog1: http://youads.top/
+blog2: http://voyage.cab/
+}
+WaveAds:{
+https://waveads-global.com/
+}
+TTS:{
+blog1: voyage.pub
+blog2: youads.site
+blog3: youadsmedia.top
+}

@@ -1,6 +1,6 @@
-import Kuponz2Home from "@/pages/kuponz/blog2/Home";
-import Kuponz2France from "@/pages/kuponz/blog2/France";
-import Kuponz2ArticleDetail from "@/pages/kuponz/blog2/ArticleDetail";
+import Kuponz2Home from "@/pages/casback-tech/Home";
+import Kuponz2France from "@/pages/casback-tech/France";
+import Kuponz2ArticleDetail from "@/pages/casback-tech/ArticleDetail";
 export default {
   test: [
     {

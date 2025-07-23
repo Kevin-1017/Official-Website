@@ -1,12 +1,8 @@
-import Kuponz1Home from "@/pages/kuponz/blog1/BlogList";
-import Kuponz1ArticleDetail from "@/pages/kuponz/blog1/ArticleDetail";
+import Kuponz1Home from "@/pages/kuponz-oline-mobi/BlogList";
+import Kuponz1ArticleDetail from "@/pages/kuponz-oline-mobi/ArticleDetail";
 
 export default {
   test: [
-    {
-      path: "/",
-      element: <Kuponz1Home />,
-    },
     {
       path: "/kuponz1/home",
       element: <Kuponz1Home />,

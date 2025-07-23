@@ -1,0 +1,101 @@
+@use "@/index.scss" as *;
+
+.blog_list {
+  .page_header {
+    text-align: center;
+    // max-width: 800px;
+    margin: 4rem auto;
+    margin-top: 0px;
+    padding: 150px 24px;
+    width: 100%;
+    height: 500px;
+    position: relative; // 添加相对定位，作为伪元素的参考
+    overflow: hidden; // 确保伪元素不会溢出
+
+    // 使用伪元素显示背景图片并设置透明度
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-position: center;
+      background-image: url(../Public/banner_home.jpg);
+      background-size: cover;
+      opacity: 0.6; // 设置透明度，范围 0 - 1，0 为完全透明，1 为完全不透明
+      z-index: -1; // 确保伪元素在内容下方
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 1.7;
+    }
+  }
+
+  .article_grid {
+    display: grid;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .article_card {
+    display: grid;
+    gap: 1.5rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+    }
+
+    .card_image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: $border-radius;
+      transition: transform $transition;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+
+    .card_content {
+      h2 {
+        margin: 0 0 1rem;
+        font-size: 1.8rem;
+        line-height: 1.3;
+
+        a {
+          color: inherit;
+
+          &:hover {
+            color: $shopify-green;
+          }
+        }
+      }
+
+      p {
+        margin: 0 0 1.5rem;
+        color: $text-secondary;
+      }
+      .excerpt {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+      .read_more {
+        font-weight: 600;
+      }
+    }
+  }
+}

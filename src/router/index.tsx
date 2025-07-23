@@ -1,10 +1,13 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useMemo } from "react";
 import domainList from "@/utils/data/domainList";
+import NotFound from "@/components/NotFound";
 import kuponz1Routes from "./modules/kuponz1";
 import kuponz2Routes from "./modules/kuponz2";
-import waveads1Routes from "./modules/waveads1";
-import privacyRoutes from "./modules/privacypolicy";
+import waveadsRoutes from "./modules/waveads";
+import tts1Routes from "./modules/tts1";
+import tts2Routes from "./modules/tts2";
+import tts3Routes from "./modules/tts3";
 
 //路由命名规范
 // 1. 路由名称全部使用小写字母，多个单词使用下划线连接
@@ -16,6 +19,9 @@ const Router: React.FC = () => {
 
   //本地环境及测试环境通用的默认路由
   let actualRouter = [
+    //默认路由
+    { path: "*", element: <NotFound /> },
+
     //kuponz官网一路由
     ...kuponz1Routes.test,
 
@@ -23,10 +29,15 @@ const Router: React.FC = () => {
     ...kuponz2Routes.test,
 
     //waveads路由
-    ...waveads1Routes.test,
+    ...waveadsRoutes.test,
 
-    //privacy路由
-    ...privacyRoutes.test,
+    //tts官网一路由
+    ...tts1Routes.test,
+
+    //tts官网二路由
+    ...tts2Routes.test,
+
+    //tts官网三路由
   ];
 
   switch (currentHostName) {
@@ -52,12 +63,20 @@ const Router: React.FC = () => {
       break;
     // //waveads官网
     // case domainList.waveads[0]:
-    //   actualRouter = [...waveads1Routes.onLine];
+    //   actualRouter = [...waveadsRoutes.onLine];
     //   break;
-    // //privacy
-    // case domainList.privacy[0]:
-    //   actualRouter = [...privacyRoutes.onLine];
-    //   break;
+    // tts官网一
+    case domainList.tts[0]:
+      actualRouter = [...tts1Routes.onLine];
+      break;
+    // tts官网二
+    case domainList.tts[1]:
+      actualRouter = [...tts2Routes.onLine];
+      break;
+    // tts官网三
+    case domainList.tts[2]:
+      actualRouter = [...tts3Routes.onLine];
+      break;
   }
   const router = createBrowserRouter(actualRouter);
   return <RouterProvider router={router} />;
