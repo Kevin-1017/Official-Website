@@ -2,9 +2,9 @@ import styles from "./index.module.scss";
 import TabList from "../Tab";
 import brand from "../Public/brand.jpg";
 import Footer from "../Footer/index";
-import Wall from "../Wall";
+// import Wall from "../Wall";
 import { teamData } from "./config";
-import AnimatedComponent from "@/components/Animation";
+// import AnimatedComponent from "@/components/Animation";
 {
   window.$t("");
 }
@@ -19,7 +19,7 @@ function Home() {
           backgroundPosition: "center",
         }}
       >
-        <AnimatedComponent animationType="slide_left">
+        {/* <AnimatedComponent animationType="slide_left">
           <div className={styles.banner_home_text}>
             <h1>{window.$t("The Digital Wave Rider")}</h1>
             <p>
@@ -28,13 +28,13 @@ function Home() {
               )}
             </p>
           </div>
-        </AnimatedComponent>
+        </AnimatedComponent> */}
       </div>
 
       <div className={styles.container}>
         <div className={styles.brand}>
           <img src={brand} alt="" />
-          <AnimatedComponent animationType="slide_right">
+          {/* <AnimatedComponent animationType="slide_right">
             <div className={styles.brand_right}>
               <h1>{window.$t("Brand Introduction")}</h1>
               <p>
@@ -43,13 +43,13 @@ function Home() {
                 )}
               </p>
             </div>
-          </AnimatedComponent>
+          </AnimatedComponent> */}
         </div>
         <div className={styles.team}>
           <h1> {window.$t("Global Team")}</h1>
 
           <ul>
-            {teamData.map((item, index) => (
+            {/* {teamData.map((item, index) => (
               <AnimatedComponent animationType="appear">
                 <li style={{ animationDelay: `${(index + 1) * 0.2}s` }}>
                   <div>
@@ -60,10 +60,10 @@ function Home() {
                   </div>
                 </li>
               </AnimatedComponent>
-            ))}
+            ))} */}
           </ul>
         </div>
-        <Wall />
+        {/* <Wall /> */}
       </div>
       <Footer />
     </div>

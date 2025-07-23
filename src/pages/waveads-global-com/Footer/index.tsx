@@ -7,7 +7,7 @@ import { PlusOutlined } from "@ant-design/icons";
 import { Upload, Button } from "antd";
 import axios from "axios";
 import { RcFile } from "antd/es/upload/interface";
-import AnimatedComponent from "@/components/Animation";
+// import AnimatedComponent from "@/components/Animation";
 {
   window.$t("");
 }
@@ -61,7 +61,7 @@ function Footer() {
       <div className={styles.footer}>
         <div className={styles.careers}>
           {/* 这就是个div */}
-          <AnimatedComponent animationType="slide_up">
+          {/* <AnimatedComponent animationType="slide_up">
             <div className={styles.careers_text}>
               <h1>Careers</h1>
               <p className={styles.Careers_p} onClick={() => setOpen(true)}>
@@ -69,7 +69,7 @@ function Footer() {
                 if there’s a match.
               </p>
             </div>
-          </AnimatedComponent>
+          </AnimatedComponent> */}
 
           <div className={styles.module}>
             <p className={styles.Copyright_p}>
