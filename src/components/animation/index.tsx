@@ -6,7 +6,7 @@ interface AnimatedComponentProps {
   children: ReactNode;
   animationType: AnimationType;
 }
-export const AnimatedComponent: React.FC<AnimatedComponentProps> = ({
+const AnimatedComponent: React.FC<AnimatedComponentProps> = ({
   children,
   animationType,
 }) => {
@@ -45,3 +45,4 @@ export const AnimatedComponent: React.FC<AnimatedComponentProps> = ({
 
   return <div ref={ref}>{children}</div>;
 };
+export default AnimatedComponent;

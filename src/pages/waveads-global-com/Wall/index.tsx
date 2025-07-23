@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./index.module.scss";
 import { wallData, caseImg, caseData } from "./config";
-import { AnimatedComponent } from "@/components/Animation";
+import AnimatedComponent from "@/components/Animation";
 // import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 {
   window.$t("");
