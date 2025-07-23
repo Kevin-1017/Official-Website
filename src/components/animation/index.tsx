@@ -6,7 +6,7 @@ interface AnimatedComponentProps {
   children: ReactNode;
   animationType: AnimationType;
 }
-export const AnimatedComponent = ({
+export const AnimatedComponent: React.FC<AnimatedComponentProps> = ({
   children,
   animationType,
 }: AnimatedComponentProps) => {
