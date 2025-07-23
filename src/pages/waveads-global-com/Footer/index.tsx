@@ -7,7 +7,7 @@ import { PlusOutlined } from "@ant-design/icons";
 import { Upload, Button } from "antd";
 import axios from "axios";
 import { RcFile } from "antd/es/upload/interface";
-import { AnimatedComponent } from "@/components/Animation";
+import AnimatedComponent from "@/components/Animation";
 {
   window.$t("");
 }

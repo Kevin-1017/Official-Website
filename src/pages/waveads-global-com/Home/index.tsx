@@ -4,7 +4,7 @@ import brand from "../Public/brand.jpg";
 import Footer from "../Footer/index";
 import Wall from "../Wall";
 import { teamData } from "./config";
-import { AnimatedComponent } from "@/components/Animation";
+import AnimatedComponent from "@/components/Animation";
 {
   window.$t("");
 }
