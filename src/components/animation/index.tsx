@@ -9,7 +9,7 @@ interface AnimatedComponentProps {
 export const AnimatedComponent: React.FC<AnimatedComponentProps> = ({
   children,
   animationType,
-}: AnimatedComponentProps) => {
+}) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
