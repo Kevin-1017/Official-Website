@@ -38,6 +38,7 @@ const Router: React.FC = () => {
     ...tts2Routes.test,
 
     //tts官网三路由
+    ...tts3Routes.test,
   ];
 
   switch (currentHostName) {

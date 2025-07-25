@@ -1,10 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { articles } from "../MockArticles/data/index";
-import Tab from "../Tab/index";
 import Footer from "@/components/Footer";
+import Tab from "../Tab/index";
 import styles from "./index.module.scss";
-
 const ArticleDetail = () => {
   const { id } = useParams<{ id: string }>();
   const [article] = useState<any>(
@@ -15,6 +14,7 @@ const ArticleDetail = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div>
       <Tab />
@@ -75,7 +75,7 @@ const ArticleDetail = () => {
           fontSize: "13px",
           fontWeight: "bold",
         }}
-        copyright=" Copyright © 2026 Voyage. All Rights Reserved."
+        copyright=" Copyright © 2026 Youadsmedia-Top. All Rights Reserved."
       />
     </div>
   );

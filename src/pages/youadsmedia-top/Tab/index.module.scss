@@ -1,0 +1,34 @@
+.tab {
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #ccc;
+  padding: 0 200px;
+  background-color: white;
+  z-index: 1000; /* 根据需要调整z-index值，确保它位于其他内容之上 */
+  .tab_list {
+    display: flex;
+    height: 100%;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+
+      cursor: pointer;
+      &:hover,
+      &.active {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+}
+.norem_tab {
+  height: 50px;
+  font-size: 13px;
+  font-family: "Segoe UI", sans-serif; // 设置字体家族
+  font-weight: 600; // 加粗
+  color: #333;
+  li {
+    width: 70px;
+  }
+}
