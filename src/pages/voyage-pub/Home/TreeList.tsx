@@ -34,7 +34,13 @@ const TreeList = () => {
                   <p>{item.date}</p>
                 </div>
                 <div>
-                  <img src={item.image} alt={item.title} />
+                  <img
+                    onClick={() => {
+                      handleArticleClick(item.id);
+                    }}
+                    src={item.image}
+                    alt={item.title}
+                  />
                 </div>
               </div>
             ))}
@@ -42,7 +48,13 @@ const TreeList = () => {
 
           <div className={styles.right}>
             <div>
-              <img src={article.image} alt={article.title} />
+              <img
+                onClick={() => {
+                  handleArticleClick(article.id);
+                }}
+                src={article.image}
+                alt={article.title}
+              />
             </div>
             <h1
               onClick={() => {

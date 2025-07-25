@@ -11,7 +11,10 @@
     height: 500px;
     position: relative; // 添加相对定位，作为伪元素的参考
     overflow: hidden; // 确保伪元素不会溢出
-
+    display: flex; // 使用 Flexbox 布局
+    flex-direction: column; // 垂直排列
+    justify-content: center; // 垂直居中
+    align-items: center; // 水平居中
     // 使用伪元素显示背景图片并设置透明度
     &::before {
       content: "";
@@ -23,8 +26,8 @@
       background-position: center;
       background-image: url(../Public/banner_home.jpg);
       background-size: cover;
-      opacity: 0.6; // 设置透明度，范围 0 - 1，0 为完全透明，1 为完全不透明
       z-index: -1; // 确保伪元素在内容下方
+      opacity: 0.5; // 调整透明度
     }
     h1 {
       font-size: 2.5rem;
@@ -41,7 +44,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
-
+    padding-bottom: 50px;
     @media (min-width: 768px) {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -65,6 +68,7 @@
 
       &:hover {
         transform: scale(1.02);
+        transition: all 0.5s;
       }
     }
 
@@ -79,6 +83,7 @@
 
           &:hover {
             color: $shopify-green;
+            transition: all 0.5s;
           }
         }
       }

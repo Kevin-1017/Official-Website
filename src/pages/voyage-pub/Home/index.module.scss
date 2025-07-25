@@ -1,6 +1,6 @@
 .home {
   //   background-image: url(../Public/bgc_home.jpg);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #eeeeee;
   background-blend-mode: overlay; /* 混合模式可以根据需要调整 */
 }
 
@@ -17,10 +17,7 @@
   margin-bottom: 50px;
   position: relative; /* 确保伪元素相对于这个元素定位 */
   z-index: 1; /* 确保内容在伪元素之上 */
-  h1 {
-    position: absolute;
-    top: 10%;
-  }
+  color: white;
 }
 
 /* 添加伪元素用于背景图 */
@@ -35,7 +32,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: -1; /* 将伪元素置于底层 */
 }
 
@@ -61,12 +58,14 @@
         transition: all 0.5s;
         &:hover {
           transform: scale(1.03);
+          cursor: pointer;
         }
       }
       h1 {
         margin-bottom: 10px;
         span:hover {
           cursor: pointer;
+          transition: all 0.5s;
           color: rgb(115, 137, 155);
         }
       }
@@ -114,6 +113,7 @@
         h2 {
           &:hover {
             color: rgb(115, 137, 155);
+            transition: all 0.5s;
             cursor: pointer;
           }
         }
@@ -125,6 +125,7 @@
         transition: all 0.5s;
         &:hover {
           transform: scale(1.03);
+          cursor: pointer;
         }
       }
       p {
@@ -146,11 +147,13 @@
       transition: all 0.5s;
       &:hover {
         transform: scale(1.03);
+        cursor: pointer;
       }
     }
     h1 {
       &:hover {
         color: rgb(115, 137, 155);
+        transition: all 0.5s;
         cursor: pointer;
       }
     }

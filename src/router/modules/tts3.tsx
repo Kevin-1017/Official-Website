@@ -1,5 +1,5 @@
-import TTS3Home from "@/pages/youads-site/Home";
-import TTS3ArticleDetail from "@/pages/youads-site/ArticleDetail";
+import TTS3Home from "@/pages/youadsmedia-top/Home";
+import TTS3ArticleDetail from "@/pages/youadsmedia-top/ArticleDetail";
 export default {
   test: [
     {
